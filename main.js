@@ -43,13 +43,13 @@ let operator = '';
 /* Operate Function - START */
 
 function operate(number1, number2, operator) {
-  if (operator === 'add') {
+  if (operator === document.querySelector('#add')) {
     return add(number1, number2);
-  } else if (operator === 'subtract') {
+  } else if (operator === document.querySelector('#subtract')) {
     return subtract(number1, number2);
-  } else if (operator === 'multiply') {
+  } else if (operator === document.querySelector('#multiply')) {
      return multiply(number1, number2);
-  } else if (operator === 'divide') {
+  } else if (operator === document.querySelector('#divide')) {
     return divide(number1, number2);
   }
 }
@@ -60,10 +60,58 @@ function operate(number1, number2, operator) {
 
 const screen = document.querySelector('#screen');
 
-const btnOne = document.querySelector('#one');
+let btns = document.querySelectorAll('button');
 
-btnOne.addEventListener('click', () => {
-  const one = document.createElement('p');
-  one.textContent = '1';
-  screen.appendChild(one);
+let userChoice = 0;
+
+let screenDisplay = btns.forEach(btn => {
+  btn.addEventListener('click', (ev) => {
+    userChoice = ev.target.textContent;
+    let para = document.createElement('p');
+    para.textContent = userChoice;
+    screen.appendChild(para);
+    console.log(userChoice);
+  });
 });
+
+// function button(ev) {
+//   let id = ev.currentTarget.getAttribute('id');
+//   let val = ev.currentTarget.value;
+//   let btn = document.querySelector('id');
+//   let para = document.createElement('p');
+//   para.textContent = this.textContent;
+//   if (id === 'add') {
+//     return false;
+//   } else if (id === 'subtract') {
+//     return false;
+//   } else if (id === 'multiply') {
+//     return false;
+//   } else if (id === 'decimal') {
+//     return false
+//   } else if (id === 'sum') {
+//     return false;
+//   } else if (id === 'divide') {
+//     return false;
+//   } else if (id === 'percent') {
+//     return false;
+//   } else if (id === 'positive') {
+//     return false;
+//   } else if (id === 'clear') {
+//     return false;
+//   }
+//   screen.appendChild(para);
+// }
+
+
+/* Display Functionality - END */
+
+/* Functional Calculator - START */
+
+let total = document.querySelector('#sum');
+let result = total.addEventListener('click', () => {
+  operate();
+});
+
+function calculate() {
+  
+}
