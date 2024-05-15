@@ -56,3 +56,14 @@ function operate(number1, number2, operator) {
 
 /* Operate Function - END */
 
+/* Display Functionality - START */
+
+const screen = document.querySelector('#screen');
+
+const btnOne = document.querySelector('#one');
+
+btnOne.addEventListener('click', () => {
+  const one = document.createElement('p');
+  one.textContent = '1';
+  screen.appendChild(one);
+});
