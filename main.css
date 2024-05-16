@@ -1,0 +1,60 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.maincontainer {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.screencontainer {
+  display: flex;
+  justify-content: center;
+  border: 2px solid black;
+  margin: 0 570px;
+}
+
+.clearcontainer {
+  display: flex;
+  justify-content: center;
+}
+
+.rowone {
+  display: flex;
+  justify-content: center;
+}
+
+.rowtwo {
+  display: flex;
+  justify-content: center;
+}
+
+.rowthree {
+  display: flex;
+  justify-content: center;
+}
+
+.rowfour {
+  display: flex;
+  justify-content: center;
+}
+
+.btn {
+  font-size: 3rem;
+  padding: 1px 10px;
+}
+
+.btnclear {
+  font-size: 3rem;
+  padding: 1px 30px;
+}
